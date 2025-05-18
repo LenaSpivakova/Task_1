@@ -8,12 +8,11 @@ public class Util {
     private static final String URL = "jdbc:postgresql://localhost:5432/tutdb";
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "S2002Le";
-
     public static Connection getConnection() {
         try {
             return DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
-            throw new RuntimeException("Ошибка подключения к базе данных SQL: ", e);
+            throw new RuntimeException("Ошибка подключения к базе данных SQL: ",e);
         }
     }
 }
